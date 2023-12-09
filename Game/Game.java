@@ -46,11 +46,23 @@ public class Game {
             case 1: // Rand: keine Richtung
                 return new FieldInfo(false, false, false, false);
             case 2: // Schloss
-                return new FieldInfo(true, true, false, true);
+                return new FieldInfo(false, true, false, true);
             case 3: // Spinnenhöhle
-                return new FieldInfo(true, true, true, false);
+                return new FieldInfo(false, true, false, false);
             case 4: // Baumhaus der Hexe
-                return new FieldInfo(true, true, false, false);
+                return new FieldInfo(false, true, false, true);
+            case 5: // Verlassene Ruine
+                return new FieldInfo(true, true, true, false);
+            case 6: // Mystischer See
+                return new FieldInfo(true, true, true, true);
+            case 7: // Alter Friedhof
+                return new FieldInfo(true, false, true, true);
+            case 8: // Verzauberter Garten
+                return new FieldInfo(true, false, false, true);
+            case 9: // Unterirdische Katakomben
+                return new FieldInfo(true, false, false, false);
+            case 10: // Verlassenes Dorf
+                return new FieldInfo(false, true, true, true);
             default:
                 return new FieldInfo(false, false, false, false);
         }
