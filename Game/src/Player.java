@@ -34,7 +34,7 @@ public class Player {
                 position[0]--; // Bewegung nach Westen verringert die X-Position
                 break;
             default:
-                System.out.println("Das ist keine gültige Richtung!");
+                System.out.println("That is not a valid direction!");
         }
     }
 }

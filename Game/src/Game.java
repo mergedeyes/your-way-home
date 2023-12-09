@@ -31,7 +31,7 @@ public class Game {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("In which direction do you want to go? (North, South, East, West | use WASD to move | type 'quit' to exit)");
+            System.out.println("In which direction do you want to go? (North, South, East, West) | type 'quit' to exit");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("quit")) {
@@ -40,6 +40,7 @@ public class Game {
 
             player.move(input); // Spielerbewegung basierend auf Eingabe
             System.out.println("You are now in room X: " + player.getPosition()[0] + ", Y: " + player.getPosition()[1] + ".");
+            System.out.println(currentRoom.getDescription());
         }
 
         scanner.close();
