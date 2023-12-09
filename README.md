@@ -59,3 +59,4 @@ In "**Your Way Home**" wacht eine Person ohne Erinnerung in einem düsteren Wald
 - **Magische Gegenstände**: Unterstützen bei der Lösung von Rätseln.
 - **Geheime Pfade und versteckte Räume**: Entdeckt durch das Lösen von Rätseln.
 - **Realität vs. Traum**: Die Erfahrungen des Spielers sind möglicherweise Teil eines komatösen Traums.
+
