@@ -1,3 +1,6 @@
+# ENGLISH VERSION BELOW
+
+
 # Ideensammlung für das ASCII-Text-Adventure "Your Way Home"
 
 ## Hintergrund - "Your Way Home"
@@ -60,3 +63,66 @@ In "**Your Way Home**" wacht eine Person ohne Erinnerung in einem düsteren Wald
 - **Geheime Pfade und versteckte Räume**: Entdeckt durch das Lösen von Rätseln.
 - **Realität vs. Traum**: Die Erfahrungen des Spielers sind möglicherweise Teil eines komatösen Traums.
 
+
+
+# Collection of Ideas for the ASCII Text Adventure "Your Way Home"
+
+## Background - "Your Way Home"
+
+In "**Your Way Home**," a person wakes up in a gloomy forest with no memory. They are in a comatose state, induced by medication. The boundaries between reality and dream blur in the game, and in the end, it's revealed that the experiences were part of a coma, but they seem so real that they must have a deeper meaning.
+
+## Basic Concept
+
+- The player explores the forest, encounters eerie but harmless creatures, and solves puzzles presented in the form of mystical poems.
+- The goal is to regain lost memories and find a way back to civilization or the waking world.
+- The story emphasizes the merging of reality and dream, with poetry playing a key role.
+
+## Setting
+
+- Gloomy
+- Foggy
+- Mysterious
+- Creepy
+- Harmless
+- Poetically mystical
+
+## Characters and Locations
+
+### Characters
+
+- Player: A person in a medically induced coma.
+- Large Spider - Resident of the "Spider Cave".
+- Magician - Resides in the tower of the castle.
+- Witch - Lives in a large treehouse.
+- The Lost Wanderer - A friendly, confused clue giver.
+- The Guardian of the Forest - A mystical tree that poses riddles.
+- The Ghost Child - An invisible, enigmatic friend.
+- The Old Hermit - A sage with secrets about the forest.
+- The Trader - Seller of strange items.
+- The Cursed Princess/Prince - A sad figure in the castle.
+
+### Locations
+
+- Forest - The central area connecting all other places.
+- Castle - Situated on a cliff, accessible over a mountain.
+- Spider Cave - Under the cliff inside the mountain.
+- Witch's Treehouse - Near the mystical lake.
+- Abandoned Ruin - A place full of secrets.
+- Mystical Lake - Shows strange apparitions during a full moon.
+- The Old Cemetery - A key location for information.
+- The Enchanted Garden - Full of magical plants.
+- The Underground Catacombs - A puzzle labyrinth.
+- The Abandoned Village - Reveals the player's past.
+
+## Puzzle Structure
+
+- **Seven Major Riddles/Poems**: Each riddle is a poem divided into 2-3 sections.
+- **Smaller Poems**: Each section leads to smaller, simpler poems that provide clues to solving the overarching puzzle.
+- **Integration into the Story**: Each poem and puzzle is closely linked to the story and characters, helping to advance the narrative.
+
+## Additional Elements
+
+- **Time Travel or Flashbacks**: Provides insights into history and the past.
+- **Magical Items**: Assist in solving puzzles.
+- **Secret Paths and Hidden Rooms**: Discovered by solving puzzles.
+- **Reality vs. Dream**: The player's experiences might be part of a comatose dream.
