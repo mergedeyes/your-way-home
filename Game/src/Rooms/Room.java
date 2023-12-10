@@ -1,3 +1,4 @@
+package Rooms;
 public class Room {
     private String description;
 
@@ -7,5 +8,13 @@ public class Room {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getExtra() {
+        return ""; // Standardimplementierung
+    }
+
+    public String getActions(){
+        return ""; // Standa
     }
 }

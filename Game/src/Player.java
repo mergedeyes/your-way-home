@@ -19,20 +19,53 @@ public class Player {
         return position;
     }
 
-    public void move(String direction) {
+    public boolean isValidMove(String direction, int mapLength) {
+        int newX = position[0];
+        int newY = position[1];
+
         switch (direction.toLowerCase()) {
-            case "w":
-                position[1]--; // Bewegung nach Norden verringert die Y-Position
+            case "north": newY--; break;
+            case "south": newY++; break;
+            case "east":  newX++; break;
+            case "west":  newX--; break;
+        }
+
+        // Überprüfe, ob die neue Position innerhalb der Grenzen der Karte liegt
+        return newX >= 0 && newX < mapLength && newY >= 0 && newY < mapLength;
+    }
+
+    public void action(String direction, int mapLength) {
+        switch (direction.toLowerCase()) {
+            case "north":
+                if (isValidMove(direction, mapLength)) {
+                    position[1]--; // Bewegung nach Norden verringert die Y-Position
+                } else {
+                    System.out.println("You can't move in that direction.");
+                }
                 break;
-            case "s":
-                position[1]++; // Bewegung nach Süden erhöht die Y-Position
+            case "south":
+                if (isValidMove(direction, mapLength)) {
+                    position[1]++; // Bewegung nach Süden erhöht die Y-Position
+                } else {
+                    System.out.println("You can't move in that direction.");
+                }
                 break;
-            case "d":
-                position[0]++; // Bewegung nach Osten erhöht die X-Position
+            case "east":
+                if (isValidMove(direction, mapLength)) {
+                    position[0]++; // Bewegung nach Osten erhöht die X-Position
+                } else {
+                    System.out.println("You can't move in that direction.");
+                }
                 break;
-            case "a":
-                position[0]--; // Bewegung nach Westen verringert die X-Position
+            case "west":
+                if (isValidMove(direction, mapLength)) {
+                    position[0]--; // Bewegung nach Westen verringert die X-Position
+                } else {
+                    System.out.println("You can't move in that direction.");
+                }
                 break;
+            case "inside":
+                // TODO: Implementiere die Aktion "inside"
             default:
                 System.out.println("That is not a valid direction!");
         }

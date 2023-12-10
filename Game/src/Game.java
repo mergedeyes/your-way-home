@@ -1,9 +1,35 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
+
+import Rooms.Castle;
+import Rooms.Catacombs;
+import Rooms.Cave;
+import Rooms.DesertedVillage;
+import Rooms.EnchantedGarden;
+import Rooms.Forest;
+import Rooms.Graveyard;
+import Rooms.MysticalLake;
+import Rooms.Room;
+import Rooms.RuinedCastle;
+import Rooms.TreeHouse;
 
 public class Game {
     private Player player;
     private Room currentRoom;
+    private Map<Integer, String> roomDescriptions;
     private Scanner scanner;
+    private int[][] map = {
+        {1, 1, 1, 1, 1, 1, 1},
+        {1, 0, 0, 0, 10, 2, 1}, // Startpunkt, Wald, Verlassenes Dorf, Schloss
+        {1, 0, 0, 6, 0, 3, 1},  // Wald, Mystischer See, Spinnenhöhle
+        {1, 0, 4, 0, 0, 0, 1},  // Baumhaus der Hexe
+        {1, 5, 0, 0, 0, 0, 1},  // Verlassene Ruine
+        {1, 0, 7, 0, 0, 8, 1},  // Alter Friedhof, Verzauberter Garten
+        {1, 1, 1, 1, 9, 1, 1}   // Unterirdische Katakomben
+    };
+    public int mapLength = map.length;
+    
     
     public static void wait(int ms){
         try
@@ -24,8 +50,35 @@ public class Game {
         System.out.println("What is your name?");
         String name = scanner.nextLine();
         player = new Player(name, 1, 1, 0);
-        currentRoom = new Room("Ein dunkler, geheimnisvoller Wald.");
+        initializeRooms();
     }
+
+    private void initializeRooms() {
+    rooms = new HashMap<>();
+    rooms.put(0, new Forest());
+    rooms.put(2, new Castle());
+    rooms.put(3, new Cave());
+    rooms.put(4, new TreeHouse());
+    rooms.put(5, new RuinedCastle());
+    rooms.put(6, new MysticalLake());
+    rooms.put(7, new Graveyard());
+    rooms.put(8, new EnchantedGarden());
+    rooms.put(9, new Catacombs());
+    rooms.put(10, new DesertedVillage());
+    }
+}
+
+    private void updateCurrentRoom() {
+    int x = player.getPosition()[0];
+    int y = player.getPosition()[1];
+    int roomType = map[x][y];
+    currentRoom = rooms.get(roomType);
+}
+
+    public void clearScreen() {
+        for (int i = 0; i < 50; ++i) System.out.println();
+    }
+    
 
     public void start() {
         Scanner scanner = new Scanner(System.in);
@@ -38,9 +91,11 @@ public class Game {
                 break; // Spiel beenden, wenn der Spieler "quit" eingibt
             }
 
-            player.move(input); // Spielerbewegung basierend auf Eingabe
-            System.out.println("You are now in room X: " + player.getPosition()[0] + ", Y: " + player.getPosition()[1] + ".");
+            player.action(input, mapLength); // Spieleraktion basierend auf Eingabe
+            updateCurrentRoom();
+            clearScreen();
             System.out.println(currentRoom.getDescription());
+            System.out.println("\nYou are now in at X: " + player.getPosition()[0] + ", Y: " + player.getPosition()[1] + ".\n");
         }
 
         scanner.close();
