@@ -16,7 +16,7 @@ public class Player {
     }
 
     public int[] getPosition() {
-        return position;
+        return new int[] { position[1], position[0] }; // Gibt erst die Y-Achse, dann die X-Achse zurück
     }
 
     public boolean isValidMove(String direction, int mapLength) {

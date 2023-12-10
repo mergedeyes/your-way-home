@@ -16,4 +16,9 @@ public class DesertedVillage extends Room{
             return "You can go \"inside\", \"North\", \"South\", \"East\" or \"West\".";
         }
 
+        @Override
+        public String getName() {
+            return "Deserted Village";
+        }
+
 }

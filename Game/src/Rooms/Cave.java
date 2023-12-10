@@ -10,4 +10,9 @@ public class Cave extends Room{
         public String getActions() {
             return "You can go \"inside\", \"North\", \"South\", \"East\" or \"West\".";
         }
+
+        @Override
+        public String getName() {
+            return "Cave";
+        }
 }

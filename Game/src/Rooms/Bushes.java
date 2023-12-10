@@ -9,4 +9,9 @@ public class Bushes extends Room {
     public String getActions() {
         return "You can't go any further. You need to go back.";
     }
+
+    @Override
+    public String getName(){
+        return "Bushes";
+    }
 }

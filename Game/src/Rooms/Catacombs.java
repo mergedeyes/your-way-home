@@ -11,4 +11,9 @@ public class Catacombs extends Room{
         return "You can go \"inside\", \"North\", \"East\" or \"West\".";
     }
 
+    @Override
+    public String getName() {
+        return "Catacombs";
+    }
+
 }

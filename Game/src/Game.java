@@ -2,22 +2,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-import Rooms.Castle;
-import Rooms.Catacombs;
-import Rooms.Cave;
-import Rooms.DesertedVillage;
-import Rooms.EnchantedGarden;
-import Rooms.Forest;
-import Rooms.Graveyard;
-import Rooms.MysticalLake;
-import Rooms.Room;
-import Rooms.RuinedCastle;
-import Rooms.TreeHouse;
+import Rooms.*;
 
 public class Game {
     private Player player;
     private Room currentRoom;
-    private Map<Integer, String> roomDescriptions;
+    private Map<Integer, Room> rooms;
     private Scanner scanner;
     private int[][] map = {
         {1, 1, 1, 1, 1, 1, 1},
@@ -51,11 +41,15 @@ public class Game {
         String name = scanner.nextLine();
         player = new Player(name, 1, 1, 0);
         initializeRooms();
+        updateCurrentRoom();
+        System.out.println(currentRoom.getDescription());
+        System.out.println("\nYou are now in at X: " + player.getPosition()[0] + ", Y: " + player.getPosition()[1] + ".\n");
     }
 
     private void initializeRooms() {
     rooms = new HashMap<>();
     rooms.put(0, new Forest());
+    rooms.put(1, new Bushes());
     rooms.put(2, new Castle());
     rooms.put(3, new Cave());
     rooms.put(4, new TreeHouse());
@@ -66,14 +60,13 @@ public class Game {
     rooms.put(9, new Catacombs());
     rooms.put(10, new DesertedVillage());
     }
-}
+
 
     private void updateCurrentRoom() {
-    int x = player.getPosition()[0];
-    int y = player.getPosition()[1];
-    int roomType = map[x][y];
-    currentRoom = rooms.get(roomType);
-}
+        int[] pos = player.getPosition();
+        int roomType = map[pos[0]][pos[1]]; // Benutze Y-Achse, dann X-Achse
+        currentRoom = rooms.get(roomType);
+    }
 
     public void clearScreen() {
         for (int i = 0; i < 50; ++i) System.out.println();
@@ -95,7 +88,7 @@ public class Game {
             updateCurrentRoom();
             clearScreen();
             System.out.println(currentRoom.getDescription());
-            System.out.println("\nYou are now in at X: " + player.getPosition()[0] + ", Y: " + player.getPosition()[1] + ".\n");
+            System.out.println("\nYou are now in at X: " + player.getPosition()[1] + ", Y: " + player.getPosition()[0] + ".\n");
         }
 
         scanner.close();

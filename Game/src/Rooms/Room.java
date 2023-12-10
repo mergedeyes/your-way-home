@@ -17,4 +17,8 @@ public class Room {
     public String getActions(){
         return ""; // Standa
     }
+
+    public String getName(){
+        return ""; // Standardimplementierung
+    }
 }
