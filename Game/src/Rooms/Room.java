@@ -15,10 +15,14 @@ public class Room {
     }
 
     public String getActions(){
-        return ""; // Standa
+        return ""; // Standardimplementierung
     }
 
     public String getName(){
+        return ""; // Standardimplementierung
+    }
+
+    public String inside(){
         return ""; // Standardimplementierung
     }
 }

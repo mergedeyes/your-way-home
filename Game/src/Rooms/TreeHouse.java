@@ -15,4 +15,9 @@ public class TreeHouse extends Room{
     public String getName() {
         return "Tree House";
     }
+
+    @Override
+    public String inside() {
+        return "You are now inside the " + getName() + ".\n";
+    }
 }

@@ -16,5 +16,10 @@ public class EnchantedGarden extends Room{
         return "Enchanted Garden";
     }
 
+    @Override
+    public String inside() {
+        return "You are now inside the " + getName() + ".\n";
+    }
+
 
 }

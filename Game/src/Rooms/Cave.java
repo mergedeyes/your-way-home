@@ -15,4 +15,9 @@ public class Cave extends Room{
         public String getName() {
             return "Cave";
         }
+
+        @Override
+        public String inside() {
+            return "You are now inside the " + getName() + ".\n";
+        }
 }

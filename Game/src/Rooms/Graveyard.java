@@ -14,4 +14,9 @@ public class Graveyard extends Room{
     public String getName() {
         return "Graveyard";
     }
+
+    @Override
+    public String inside() {
+        return "You are now inside the " + getName() + ".\n";
+    }
 }

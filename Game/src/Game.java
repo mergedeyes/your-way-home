@@ -132,7 +132,7 @@ public class Game {
             PlayerVisitedMap[player.getPosition()[0]][player.getPosition()[1]] = 1;
             //System.out.println("Map:\n");
             //printPlayerVisitedMap();
-            System.out.println("\nIn which direction do you want to go? (North, South, East, West) | type 'map' to see where everything is | type 'quit' to exit");
+            System.out.println("\nIn which direction do you want to go? (North, South, East, West) | type 'map' to see where you are and everything is | type 'quit' to exit");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("quit")) {
@@ -142,6 +142,12 @@ public class Game {
             if (input.equals("map")) {
                 printMap(PlayerVisitedMap, map);
             }
+
+            if (input.equals("inside")) {
+                currentRoom.inside();
+                continue;
+            }
+
             player.action(input, mapLength); // Spieleraktion basierend auf Eingabe
             updateCurrentRoom();
             clearScreen();

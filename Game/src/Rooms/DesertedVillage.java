@@ -21,4 +21,9 @@ public class DesertedVillage extends Room{
             return "Deserted Village";
         }
 
+        @Override
+        public String inside() {
+            return "You are now inside the " + getName() + ".\n";
+        }
+
 }

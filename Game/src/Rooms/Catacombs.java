@@ -16,4 +16,9 @@ public class Catacombs extends Room{
         return "Catacombs";
     }
 
+    @Override
+    public String inside() {
+        return "You are now inside the " + getName() + ".\n";
+    }
+
 }

@@ -14,4 +14,9 @@ public class Castle extends Room{
     public String getName() {
         return "Pompous Castle";
     }
+
+    @Override
+    public String inside() {
+        return "You are now inside the " + getName() + ".\n";
+    }
 }

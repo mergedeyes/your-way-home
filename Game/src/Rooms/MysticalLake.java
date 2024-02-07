@@ -14,4 +14,9 @@ public class MysticalLake extends Room{
     public String getName(){
         return "Mystical Lake";
     }
+
+    @Override
+    public String inside() {
+        return "You are now at the border of the" + getName() + ".\n";
+    }
 }
