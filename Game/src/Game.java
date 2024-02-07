@@ -115,7 +115,7 @@ public class Game {
         // Initialisiere das Spiel mit einem Spieler und einem Start-Raum
         scanner = new Scanner(System.in);
         System.out.println("Welcome to the game!");
-        wait(1500);
+        wait(600);
         System.out.println("What is your name?");
         String name = scanner.nextLine();
         player = new Player(name, 1, 1, 0);
