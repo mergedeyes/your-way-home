@@ -41,7 +41,7 @@ public class Game {
     }
 
     public void printPlayerVisitedMap() {
-        for (int i = 0; i < PlayerVisitedMap.length; i++) {
+        for (int i = 0; i < mapLength; i++) {
             for (int j = 0; j < PlayerVisitedMap[i].length; j++) {
                 System.out.print(PlayerVisitedMap[i][j] + " ");
             }
